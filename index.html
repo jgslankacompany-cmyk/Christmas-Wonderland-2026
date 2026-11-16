@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Christmas Wonderland 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="intro">
+<div class="glow"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<nav aria-label="Sections">
+  <a href="#top">Wonderland</a><a href="#greeting">Greeting</a><a href="#finale">Finale</a>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="tree" role="img" aria-label="Glowing Christmas tree. Tap ornaments for a surprise, tap the tree to change the lights."></canvas>
+  <h1 class="gold">MERRY CHRISTMAS 2026</h1>
+  <p class="sub">May Your World Be Filled With Magic, Love &amp; Endless Happiness.</p>
+  <button class="btn enter" id="enter">Enter Wonderland</button>
+</header>
+
+<section id="greeting">
+  <h2 class="gold rv">To Everyone Around The World...</h2>
+  <p class="rv big">May this Christmas bring happiness to every heart, peace to every home, and beautiful memories that last forever.</p>
+  <p class="rv from">— <span id="who">With love</span></p>
+
+  <div class="make rv">
+    <input id="name" maxlength="40" placeholder="Sender name" aria-label="Sender name">
+    <textarea id="text" maxlength="140" rows="2" aria-label="Greeting message" placeholder="Your own greeting…"></textarea>
+  </div>
+
+  <button class="gift rv" id="gift" aria-label="Open the Christmas gift">
+    <span class="burst"></span><span class="box"></span><span class="lid"></span>
+  </button>
+  <p class="hint">Tap the gift</p>
+  <div class="surprise" id="surprise" aria-live="polite">
+    <h3 class="gold">Merry Christmas!</h3>
+    <p id="msg"></p>
+  </div>
+</section>
+
+<section id="finale">
+  <h2 class="gold rv">Christmas Is Not Just A Season...<br>It's A Feeling Shared By Hearts.</h2>
+  <p class="final gold rv">MERRY CHRISTMAS &amp; HAPPY NEW YEAR 2027</p>
+  <p class="hint">Tap anywhere for fireworks</p>
+</section>
+
+<div class="bar" role="toolbar" aria-label="Controls">
+  <button id="snowBtn" class="ic on" aria-pressed="true" title="Toggle snowfall">❄</button>
+  <button id="musicBtn" class="ic" aria-pressed="false" title="Play / pause music">
+    <span class="viz"><i></i><i></i><i></i><i></i><i></i></span>
+  </button>
+  <input id="vol" type="range" min="0" max="1" step=".01" value=".6" aria-label="Volume">
+  <button id="shareBtn" class="ic" title="Share greeting">➦</button>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
